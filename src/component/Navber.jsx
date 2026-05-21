@@ -8,7 +8,7 @@ const Navber = () => {
     const pathname = usePathname();
     console.log(pathname,'this is path name')
     return (
-        <div className='flex justify-between items-center w-400 mx-auto border-2 p-2'>
+        <div className='flex justify-between items-center w-400 mx-auto border-2 px-3 py-2'>
             <div>
              <Image className='bg-green-600 rounded-full p-1' src={logo} alt='cow' width={100} height={100}></Image>
             </div>
