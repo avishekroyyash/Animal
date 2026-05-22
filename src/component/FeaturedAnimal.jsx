@@ -10,7 +10,7 @@ const FeaturedAnimal = async() => {
             <h1 className='font-bold text-5xl my-10 '>Featured animals</h1>
             <div className='grid grid-cols-3 gap-3 '>
                 {
-                    CowData.slice(0,6).map((item,index) => <div key={index} className='border-2 p-3 '>
+                    CowData.slice(0,5).map((item,index) => <div key={index} className=' p-3 border-2 border-gray-300 rounded-2xl shadow-2xl '>
                         <div className=' relative w-full aspect-square'>
                            <Image className='rounded-2xl object-cover mb-3' src={item.image} alt='animal' fill={true}  ></Image>
                         </div>

@@ -14,11 +14,11 @@ const Footer = () => {
     <a className="link link-hover">Advertisement</a>
             </div>
                  <div className='flex flex-col space-y-2 '>
-     <h6 class="footer-title font-bold text-2xl">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
+     <h6 className="footer-title font-bold text-2xl ">Company</h6>
+    <a className="link link-hover">About us</a>
+    <a className="link link-hover">Contact</a>
+    <a className="link link-hover">Jobs</a>
+    <a className="link link-hover">Press kit</a>
             </div>
              <div className='flex flex-col space-y-2'>
   <h6 className="footer-title font-bold text-2xl">Explore</h6>
