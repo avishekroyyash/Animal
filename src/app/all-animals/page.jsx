@@ -1,3 +1,4 @@
+import Modal from '@/component/Modal';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -27,7 +28,11 @@ const AllAnimalPage =async() => {
                                  <h2 className='font-bold text-2xl'>{item.breed}</h2>
                              <button className='btn bg-green-800 text-2xl text-white rounded-2xl'><h2>{item.price}</h2></button>
                              </div>
-                             <Link href={`/all-animals/${item.id}`}><button className='btn w-full bg-green-700 text-white font-bold rounded-2xl my-2'>View Details</button></Link>
+                             {/* <Link href={`/all-animals/${item.id}`}><button className='btn w-full bg-green-700 text-white font-bold rounded-2xl my-2'>View Details</button></Link> */}
+                              
+                              
+                           <Modal item={item}></Modal>
+
                             </div>
                             </div>)
                         }
