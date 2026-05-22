@@ -3,7 +3,7 @@ import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaEye, FaRegEyeSlash } from 'react-icons/fa';
+import { FaEye, FaGoogle, FaRegEyeSlash } from 'react-icons/fa';
 
 const LoginPage = () => {
    const [passwordToggle,setpasswordToggle] = useState(true)
@@ -23,6 +23,13 @@ const LoginPage = () => {
     callbackURL: "/",
 });
     }
+
+        const handleGoogle = async () => {
+      const data = await authClient.signIn.social({
+        provider: "google",
+      });
+      console.log(data,'this is data and error from resister page')
+    };
     
     // console.log(errors,'this is login page form error')
 
@@ -46,7 +53,9 @@ const LoginPage = () => {
                
 
                <button className="btn btn-primary mt-4">Login</button>
-              <p className='font-bold my-5 text-xl'>If you don't have account. <Link className='text-blue-600' href={'/resister'}> Sign up</Link></p>   
+              <p className='font-bold mt-5 text-xl'>If you don't have account. <Link className='text-blue-600' href={'/resister'}> Sign up</Link></p>   
+                <span className='text-center font-bold text-xl '>or</span>
+                <div onClick={handleGoogle} className='btn bg-gray-300 rounded-2xl font-bold'> <FaGoogle />Continu with Google</div>
                 </form>
           
                </fieldset>

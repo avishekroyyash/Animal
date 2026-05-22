@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa6';
 
 const ResisterPage = () => {
  const router = useRouter()
@@ -25,9 +26,18 @@ const ResisterPage = () => {
  if(!error){
     router.push('/')
  }
-console.log(data,error,'this is data and error from resister page')
+// console.log(data,error,'this is data and error from resister page')
  alert('resister is successfull');
     }
+
+    const handleGoogle = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data,'this is data and error from resister page')
+};
+
+
     
   
 //    console.log(errors,'this is resister page form error')
@@ -61,7 +71,10 @@ console.log(data,error,'this is data and error from resister page')
                
 
                <button className="btn btn-primary mt-4">Resister Now</button>
-              <p className='font-bold my-5 text-xl'>If you have account . please  <Link className='text-blue-600' href={'/login'}> Login</Link></p>   
+              <p className='font-bold mt-5 text-xl'>If you have account . please  <Link className='text-blue-600' href={'/login'}> Login</Link></p> 
+
+              <span className='text-center font-bold text-xl '>or</span>
+             <div onClick={handleGoogle} className='btn bg-gray-300 rounded-2xl font-bold'> <FaGoogle />Continu with Google</div>  
                 </form>
           
                </fieldset>

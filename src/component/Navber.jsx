@@ -30,8 +30,8 @@ const Navber = () => {
              {
                 existUser ? ( <>
                     <div className="avatar avatar-online">
-                 <div className="w-24 rounded-full">
-             <Image className='rounded-full' src={existUser?.image} alt={existUser?.name[0]} fill={true} referrerPolicy='no-referrer' />
+                 <div className="w-24 ">
+             <Image className='rounded-full' src={existUser?.image} alt={existUser?.name[0]} width={100} height={100} referrerPolicy='no-referrer' />
                 </div>
                   </div>
                   <div>
