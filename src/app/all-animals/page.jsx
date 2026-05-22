@@ -31,7 +31,7 @@ const AllAnimalPage =async() => {
                              {/* <Link href={`/all-animals/${item.id}`}><button className='btn w-full bg-green-700 text-white font-bold rounded-2xl my-2'>View Details</button></Link> */}
                               
                               
-                           <Modal item={item}></Modal>
+                           <Modal item={item.id}></Modal>
 
                             </div>
                             </div>)

@@ -5,10 +5,10 @@ const AnimalDetailsPage =async ({params}) => {
     const {id} = await params ;
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json');
     const AllAnimalData = await res.json();
-    console.log(AllAnimalData,'this is allanimal data')
-    console.log(id,'this is param')
+   //  console.log(AllAnimalData,'this is allanimal data')
+   //  console.log(id,'this is param')
     const FindAnimal = AllAnimalData.find(p => p.id == id);
-    console.log(FindAnimal,'this is findanimal data')
+   //  console.log(FindAnimal,'this is findanimal data')
     return (
         <div className='mx-auto'>
           <div className='grid grid-cols-6 grid-rows-3 gap-5'>
@@ -26,10 +26,10 @@ const AnimalDetailsPage =async ({params}) => {
             </div>
          
              <div className='col-span-1  bg-white border-2  flex justify-center items-center rounded-2xl border-gray-200 shadow-2xl'>
-                <h1 className=' font-bold p-1 '>Weight: {FindAnimal.weight}</h1>
+                <h1 className=' font-bold p-1 '>Weight: {FindAnimal.weight} kg</h1>
              </div>
              <div className='col-span-1  bg-white border-2  flex justify-center items-center rounded-2xl border-gray-200 shadow-2xl'>
-                <h1 className=' font-bold p-1 '>Age: {FindAnimal.age}</h1>
+                <h1 className=' font-bold p-1 '>Age: {FindAnimal.age} year</h1>
              </div>
             <div className='col-span-1  bg-white border-2  flex justify-center items-center rounded-2xl border-gray-200 shadow-2xl'>
                 <h1 className=' font-bold p-1 '>Location: {FindAnimal.location}</h1>

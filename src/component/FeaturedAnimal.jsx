@@ -4,7 +4,7 @@ import React from 'react';
 const FeaturedAnimal = async() => {
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json')
     const CowData = await res.json();
-     console.log(CowData,'Cowdata is this ')
+   
     return (
         <div className=' max-w-[1400] mx-auto'>
             <h1 className='font-bold text-5xl my-10 '>Featured animals</h1>

@@ -1,32 +1,33 @@
 'use client'
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+const UpdateUserModal = () => {
 
-const Modal = ({ item }) => {
-    const dialogRef = useRef(null);
-    const router = useRouter();
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-    });
-
-    const openModal = () => {
-        dialogRef.current?.showModal();
-    };
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // console.log('Form Data:', formData, 'Animal ID:', item);
-        dialogRef.current?.close();
-        router.push(`/all-animals/${item}`);
-    };
+       const dialogRef = useRef(null);
+        const router = useRouter();
+    
+        const [formData, setFormData] = useState({
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+        });
+    
+        const openModal = () => {
+            dialogRef.current?.showModal();
+        };
+    
+        const handleChange = (e) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
+    
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            // console.log('Form Data:', formData, 'Animal ID:', item);
+            dialogRef.current?.close();
+            router.push(`/all-animals/${item}`);
+        };
 
     return (
         <div className="relative">
@@ -34,7 +35,7 @@ const Modal = ({ item }) => {
                 className="btn w-full bg-green-800 text-white rounded-2xl p-3 my-2"
                 onClick={openModal}
             >
-                Show Details
+            Open Contact Form
             </button>
 
             <dialog ref={dialogRef} className="modal">
@@ -62,30 +63,13 @@ const Modal = ({ item }) => {
                             placeholder="Enter your email"
                         />
 
-                        <label className="font-bold text-lg">Phone</label>
-                        <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className="input w-full bg-gray-200"
-                            placeholder="Enter your phone"
-                        />
-
-                        <label className="font-bold text-lg">Address</label>
-                        <textarea
-                            name="address"
-                            value={formData.address}
-                            onChange={handleChange}
-                            placeholder="Enter your address"
-                            className="textarea w-full bg-gray-200"
-                        />
+                       
 
                         <button
                             className="btn bg-green-700 text-white rounded-2xl"
                             onClick={handleSubmit}
                         >
-                            Submit
+                            Save Change
                         </button>
                     </div>
 
@@ -103,4 +87,4 @@ const Modal = ({ item }) => {
     );
 };
 
-export default Modal;
+export default UpdateUserModal;
