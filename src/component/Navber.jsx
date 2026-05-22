@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 const Navber = () => {
     const pathname = usePathname();
-    console.log(pathname,'this is path name')
+    // console.log(pathname,'this is path name')
     return (
         <div className='flex justify-between items-center w-400 mx-auto my-5 border-b-2 border-gray-300 shadow-2xl px-3 py-2'>
             <div>
