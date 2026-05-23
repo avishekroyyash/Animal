@@ -8,7 +8,7 @@ import { TbChevronsDownLeft } from 'react-icons/tb';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
-   const [passwordToggle,setpasswordToggle] = useState(true)
+   const [passwordToggle,setpasswordToggle] = useState(false)
     const {
     register,
     handleSubmit,

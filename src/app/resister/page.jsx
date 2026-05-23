@@ -2,12 +2,14 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { FaEye, FaRegEyeSlash } from 'react-icons/fa';
 import { FaGoogle } from 'react-icons/fa6';
 import { toast } from 'react-toastify';
 
 const ResisterPage = () => {
+    const [passwordToggle,setpasswordToggle] = useState(false)
  const router = useRouter()
     const {
     register,
@@ -24,11 +26,20 @@ const ResisterPage = () => {
     password: Data.password, // required
     image: Data.photo,
 });
+
+if(!error){
+toast.success('Register is Successfully Complete')
+}
+else {
+  toast.error(error.message)
+}
+
  if(!error){
     router.push('/login')
  }
 // console.log(data,error,'this is data and error from resister page')
-toast.success('Register is Successfully Complete')
+
+
     }
 
     const handleGoogle = async () => {
@@ -68,9 +79,9 @@ toast.success('Register is Successfully Complete')
 
 
               <label className="font-bold text-lg ">Password</label>
-              <input type= 'password' className="input w-full bg-gray-200" placeholder="Enter your password"  {...register("password", { required: 'Password fill is required' })}  />
-                  {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-               
+              <input type={passwordToggle ? 'text' : 'password'} className="input w-full bg-gray-200" placeholder="Enter your password"  {...register("password", { required: 'Password fill is required' })}  />
+             {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
+              <span className='absolute top-87 right-10' onClick={()=>setpasswordToggle(!passwordToggle)}>{passwordToggle ? <FaEye/> : <FaRegEyeSlash />}</span>
 
                <button className="btn btn-primary mt-4">Resister Now</button>
               <p className='font-bold mt-5 text-xl'>If you have account . please  <Link className='text-blue-600' href={'/login'}> Login</Link></p> 
