@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+Project name : Animal LiveStook 
+Purpose of this project : The purpose of this prject is Easy to online sell . Using this Website a user can see the details of different types of Qurbani animal and if he like any cow he can buy and explore different type of animal
+key feature of this project : 
+1.there are login and logout option
+2.Using google any one can sign in
+3.Responsive Design for mobile,tablet,laptop and desktop
+4.implement sorted list  
+5.Use SEO meta data 
+6.Client & Server Component Integration
+7.Fetching Data from JSON/API 
+8.Password Show/Hide Functionality
+9.Loading & Error Handling System
+10.Image Optimization using Next Image
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Technoly that can use :
+1.Next.js
+2.React.jx
+3.Tailwind CSS
+4.Javascript 
+5.Daisy ui
+6.MongoDb atlas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm packages use 
+1.react Toastify
+2.react form hook
+3.reat icon
+4.animal.css
+5.Better auth
+6.react navigate

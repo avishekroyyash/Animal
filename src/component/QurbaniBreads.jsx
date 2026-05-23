@@ -10,7 +10,7 @@ const QurbaniBreads = () => {
         <div className='lg:max-w-350 mx-auto'>
               <h1 className='text-center font-bold text-5xl my-10'>Top Qurbani Breeds</h1>
    
-        <div className='lg:flex justify-center gap-70 border-2 p-15 bg-green-900 text-white rounded-2xl shadow-2xl'>
+        <div className='animate__animated animate__pulse lg:flex justify-center gap-70 border-2 p-15 bg-green-900 text-white rounded-2xl shadow-2xl'>
           
             <div className='space-y-7 '>
                 <h1 className='font-bold text-3xl'>Popular Cow Breeds</h1>

@@ -40,7 +40,7 @@ const Sorting = ({AnimalData }) => {
   </div>
 
 
-<div className='grid md:grid-cols-2 md:mb-10 lg:grid-cols-3 gap-3 md:gap-5 '>
+<div className='grid md:grid-cols-2 md:mb-10 lg:grid-cols-3 gap-3 md:gap-5 animate__animated animate__bounceIn '>
                         {
                           sortedData.map((item,index) => <div key={index} className=' p-3 border-2 border-gray-300 rounded-2xl shadow-2xl '>
                                 <div className=' relative w-full aspect-square'>

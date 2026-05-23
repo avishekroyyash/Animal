@@ -13,7 +13,7 @@ const ProfilePage = () => {
         //  console.log(existUser,'thsi is exist user')
     return (
         <div>
-            <div className='flex border-2 justify-center flex-col items-center p-5 mx-auto border-gray-300 shadow-2xl '>
+            <div className='flex animate__animated animate__pulse border-2 justify-center flex-col items-center p-5 mx-auto border-gray-300 shadow-2xl '>
           <div className="avatar avatar-online ">
                         <div className="w-24">
                     <Image className='rounded-full' src={existUser?.image} alt={existUser?.name[0]} width={100} height={100} referrerPolicy='no-referrer' />
