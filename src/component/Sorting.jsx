@@ -27,7 +27,7 @@ const Sorting = ({AnimalData }) => {
 
     return (
         <div>
- <div className='flex justify-between items-center px-7 mb-15'>
+ <div className='md:flex lg:flex justify-between items-center px-7 mb-15 '>
                       <h1 className='font-bold text-5xl my-10 '>All Animals</h1>
  {/* this is sorting */}
  <div class="dropdown dropdown-start">
@@ -40,7 +40,7 @@ const Sorting = ({AnimalData }) => {
   </div>
 
 
-<div className='grid grid-cols-3 gap-3 '>
+<div className='grid md:grid-cols-2 md:mb-10 lg:grid-cols-3 gap-3 md:gap-5 '>
                         {
                           sortedData.map((item,index) => <div key={index} className=' p-3 border-2 border-gray-300 rounded-2xl shadow-2xl '>
                                 <div className=' relative w-full aspect-square'>

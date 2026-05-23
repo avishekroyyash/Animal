@@ -9,9 +9,9 @@ export const metadata = {
 
 const QurbaniGuide = () => {
     return (
-        <div className='max-w-[1400px] mx-auto my-10'>
-        <div className='flex border-2 items-center gap-50 p-10 rounded-2xl bg-green-950'>
-            <div>
+        <div className='lg:max-w-[1400px] mx-auto my-10'>
+        <div className='lg:flex border-2 items-center gap-50 p-10 rounded-2xl bg-green-950'>
+            <div className='md:mb-5'>
             <Image className='rounded-2xl' src={cowimg} alt='cow' width={700} height={300} >
 
             </Image>

@@ -45,13 +45,13 @@ toast.success('Register is Successfully Complete')
 //    console.log(errors,'this is resister page form error')
 
     return (
-       <div className='bg-gray-300 p-10 container mx-auto'>
+       <div className='bg-green-800 md:p-10 lg:p-10 container mx-auto'>
        
-                <fieldset className="fieldset bg-base-200  rounded-box w-xl border-3 border-amber-50  p-4 container mx-auto  ">
-                 <h1 className='font-bold text-4xl text-center my-10'>Resister your account</h1>
+                <fieldset className="fieldset bg-base-200  rounded-box md:w-md lg:w-xl border-3 border-amber-50 md:p-4 lg:p-4 container mx-auto  ">
+                 <h1 className='font-bold text-4xl text-center lg:my-10'>Resister your account</h1>
     
                 <form onSubmit={handleSubmit(onSubmit)} className='relative flex flex-col justify-center mx-auto border-2
-                 w-112.5 border-amber-50 space-y-3 p-4 '>
+             lg:w-112.5 border-amber-50 space-y-3 p-4 '>
                     
                  <label className="font-bold text-lg">Name</label>
                  <input type="text" className="input w-full bg-gray-200" placeholder="Enter your name"  {...register("name", { required:'Name  filled is Required' })} />

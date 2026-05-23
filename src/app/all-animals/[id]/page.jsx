@@ -25,7 +25,7 @@ const AnimalDetailsPage =async ({params}) => {
    //  console.log(FindAnimal,'this is findanimal data')
     return (
         <div className='mx-auto'>
-          <div className='grid grid-cols-6 grid-rows-3 gap-5'>
+          <div className='grid md:grid-cols-5 md:gap-3 md:mt-5 lg:mt-5 lg:grid-cols-6 lg:grid-rows-3 gap-1 lg:gap-5'>
             <div className='col-span-3 row-span-3 '>
             <Image className='rounded-2xl' src={FindAnimal.image} alt={FindAnimal.name} width={700} height={300} ></Image>
             </div>
@@ -48,7 +48,7 @@ const AnimalDetailsPage =async ({params}) => {
             <div className='col-span-1  bg-white border-2  flex justify-center items-center rounded-2xl border-gray-200 shadow-2xl'>
                 <h1 className=' font-bold p-1 '>Location: {FindAnimal.location}</h1>
             </div>
-               <div className='col-span-3 row-span-1 bg-amber-200 text-center space-y-3 rounded-2xl max-h-[150px]'>
+               <div className='col-span-3 row-span-1 bg-amber-200 text-center space-y-3 rounded-2xl max-h-[150px] mb-10'>
                 <h1 className='font-bold text-3xl mt-3'>{FindAnimal.name}</h1>
                 <p className='font-semibold text-2xl'>{FindAnimal.description}</p>
                 <button className='btn p-3 rounded-2xl font-bold '>Price : {FindAnimal.price}</button>

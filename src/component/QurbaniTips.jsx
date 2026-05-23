@@ -10,7 +10,7 @@ const QurbaniTips = () => {
               <h1 className='text-5xl font-bold text-green-800'>Qurbani Tips</h1>
             <h1 className='text-3xl font-bold text-orange-600'>Essential Tips Before Buying Qurbani Animals</h1>
           </div>
-        <div className='grid grid-cols-3 max-w-[1400px] mx-auto gap-3'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-3 lg:max-w-350 mx-auto gap-3'>
             <div className='border-1 space-y-3 bg-orange-700 text-white p-3 rounded-2xl '>
                 <h1 className='font-bold text-2xl'>1. Check Animal Health</h1>
                <ul className='list-disc pl-5 '>

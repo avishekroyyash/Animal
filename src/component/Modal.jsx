@@ -31,9 +31,9 @@ const Modal = ({ item }) => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative  ">
             <button
-                className="btn w-full bg-green-800 text-white rounded-2xl p-3 my-2"
+                className="btn w-full bg-green-800 text-white rounded-2xl p-3 my-2 "
                 onClick={openModal}
             >
                 Show Details
@@ -93,7 +93,7 @@ const Modal = ({ item }) => {
 
                     <div className="modal-action">
                         <button
-                            className="btn"
+                            className="btn mb-20 md:mb-60"
                             onClick={() => dialogRef.current?.close()}
                         >
                             Close

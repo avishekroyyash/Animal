@@ -7,25 +7,25 @@ export const metadata = {
 
 const Footer = () => {
     return (
-        <footer className=' max-w-[1600px] mx-auto '>
-          <div className='grid grid-cols-3 border-2 border-white my-10 gap-300 px-30 py-10 bg-green-800 rounded-xl'>
+        <footer className=' lg:max-w-400 mx-auto mb-50'>
+          <div className='grid lg:grid-cols-3 border-2 border-white md:mb-50 lg:my-10 gap-10 lg:gap-300 px-30 py-10 bg-green-800 rounded-xl'>
 
-          <div className='flex gap-80 text-white'>
-              <div className='flex flex-col space-y-2 '>
+          <div className=' md:flex lg:flex gap-5 md:gap-25 lg:gap-80 text-white'>
+              <div className='flex flex-col space-y-2 mb-5'>
     <h6 className="footer-title font-bold text-2xl">Services</h6>
     <a className="link link-hover">Branding</a>
     <a className="link link-hover">Design</a>
     <a className="link link-hover">Marketing</a>
     <a className="link link-hover">Advertisement</a>
             </div>
-                 <div className='flex flex-col space-y-2 '>
+                 <div className='flex flex-col space-y-2 mb-5 '>
      <h6 className="footer-title font-bold text-2xl ">Company</h6>
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
             </div>
-             <div className='flex flex-col space-y-2'>
+             <div className='flex flex-col space-y-2 '>
   <h6 className="footer-title font-bold text-2xl">Explore</h6>
     <a className="link link-hover">Features</a>
     <a className="link link-hover">Enterprise</a>
@@ -36,7 +36,7 @@ const Footer = () => {
 
                  <div className='flex flex-col space-y-2 text-white'>
  <h6 className="footer-title font-bold text-2xl">Social</h6>
-    <div className="grid grid-flow-col gap-4">
+    <div className="grid grid-flow-col gap-4 md:gap-1">
       <a>
         <svg
           xmlns="http://www.w3.org/2000/svg"

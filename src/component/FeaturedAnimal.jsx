@@ -11,9 +11,9 @@ const FeaturedAnimal = async() => {
     const CowData = await res.json();
    
     return (
-        <div className=' max-w-[1400] mx-auto'>
+        <div className=' lg:max-w-[1400] mx-auto'>
             <h1 className='font-bold text-5xl my-10 '>Featured animals</h1>
-            <div className='grid grid-cols-3 gap-3 '>
+            <div className='grid md:grid-cols-2  lg:grid-cols-3 gap-3 '>
                 {
                     CowData.slice(0,5).map((item,index) => <div key={index} className=' p-3 border-2 border-gray-300 rounded-2xl shadow-2xl '>
                         <div className=' relative w-full aspect-square'>

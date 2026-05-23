@@ -13,7 +13,7 @@ const AllAnimalPage =async() => {
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json')
     const AnimalData = await res.json();
     return (
-           <div className='min-w-[1400px] mx-auto '>
+           <div className='lg:max-w-350 mx-auto '>
                    <Sorting AnimalData={AnimalData } ></Sorting>
                   
                 </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaGoogle, FaRegEyeSlash } from 'react-icons/fa';
+import { TbChevronsDownLeft } from 'react-icons/tb';
 import { toast } from 'react-toastify';
 
 const LoginPage = () => {
@@ -23,7 +24,16 @@ const LoginPage = () => {
     rememberMe: true,
     callbackURL: "/",
 });
+// toast.success('Login is Successfully Complete')
+if(!error){
 toast.success('Login is Successfully Complete')
+}
+else {
+  toast.error(error.message)
+}
+// console.log(error,'this is error of login page')
+// console.log(error.message,'this is errormess')
+
     }
 
         const handleGoogle = async () => {
@@ -37,13 +47,13 @@ toast.success('Login is Successfully Complete')
     // console.log(errors,'this is login page form error')
 
     return (
-        <div className='bg-gray-300 p-10 container mx-auto'>
+        <div className='bg-green-800 md:p-10 lg:p-10 container mx-auto'>
            
-                <fieldset className="fieldset bg-base-200  rounded-box w-xl border-3 border-amber-50  p-4 container mx-auto  ">
-                 <h1 className='font-bold text-4xl text-center my-10'>Login your account</h1>
+                <fieldset className="fieldset bg-base-200  rounded-box md:w-md lg:w-xl border-3 border-amber-50 md:p-4 lg:p-4 container mx-auto  ">
+                 <h1 className='font-bold text-4xl text-center lg:my-10'>Login your account</h1>
     
                 <form onSubmit={handleSubmit(onSubmit)} className=' relative flex flex-col justify-center mx-auto border-2
-                 w-112.5 border-amber-50 space-y-3 p-4 '>
+                 lg:w-112.5 border-amber-50 space-y-3 p-4 '>
                      <label className="font-bold text-lg">Email</label>
                  <input type="email" className="input w-full bg-gray-200" placeholder="Enter your email" {...register("email",{ required:'Email fill is Required' })} />
                  {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
