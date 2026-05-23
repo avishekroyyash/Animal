@@ -1,5 +1,8 @@
 import React from 'react';
-
+export const metadata = {
+  title: 'Animal Loading',
+  description: 'this is animal loading',
+}
 const LoadingPage = () => {
     return (
         <div className='p-50'>

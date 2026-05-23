@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaGoogle, FaRegEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
    const [passwordToggle,setpasswordToggle] = useState(true)
@@ -22,13 +23,15 @@ const LoginPage = () => {
     rememberMe: true,
     callbackURL: "/",
 });
+toast.success('Login is Successfully Complete')
     }
 
         const handleGoogle = async () => {
       const data = await authClient.signIn.social({
         provider: "google",
       });
-      console.log(data,'this is data and error from resister page')
+      toast.success('Google login is Successfully Complete')
+      // console.log(data,'this is data and error from resister page')
     };
     
     // console.log(errors,'this is login page form error')

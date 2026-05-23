@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Animal Footer',
+  description: 'this is animal footer',
+}
+
 const Footer = () => {
     return (
         <footer className=' max-w-[1600px] mx-auto '>

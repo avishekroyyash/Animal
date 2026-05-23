@@ -1,6 +1,7 @@
 'use client'
 import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const Modal = ({ item }) => {
     const dialogRef = useRef(null);
@@ -25,6 +26,7 @@ const Modal = ({ item }) => {
         e.preventDefault();
         // console.log('Form Data:', formData, 'Animal ID:', item);
         dialogRef.current?.close();
+        toast.success('Form is Successfully Submitted')
         router.push(`/all-animals/${item}`);
     };
 

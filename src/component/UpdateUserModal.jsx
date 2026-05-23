@@ -1,6 +1,7 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import { useRef, useState } from 'react';
+import { toast } from 'react-toastify';
 const UpdateUserModal = () => {
 
 
@@ -32,6 +33,7 @@ const UpdateUserModal = () => {
              image
                   })
             dialogRef.current?.close();
+            toast.success('Succesfully change the data')
           
         };
 

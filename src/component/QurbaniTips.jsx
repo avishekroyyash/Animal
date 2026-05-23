@@ -1,5 +1,8 @@
 import React from 'react';
-
+export const metadata = {
+  title: 'Animal Qurbanitips',
+  description: 'this is animal qurbanitips',
+}
 const QurbaniTips = () => {
     return (
         <div>

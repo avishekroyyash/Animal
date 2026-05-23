@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Animal QurbaniBreads',
+  description: 'this is the animal QurbaniBreads ',
+}
+
 const QurbaniBreads = () => {
     return (
         <div className='max-w-[1400px] mx-auto'>

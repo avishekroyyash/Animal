@@ -2,6 +2,12 @@ import React from 'react';
 import bannerimg from '@/Asset/banner-cow.jpg'
 import Image from 'next/image';
 import Link from 'next/link';
+
+export const metadata = {
+  title: 'Animal Banner',
+  description: 'this is Animal banner',
+}
+
 const Banner = () => {
     return (
         <div className='relative bg-gray-300  max-w-[1400] mx-auto '>

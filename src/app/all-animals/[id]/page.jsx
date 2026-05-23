@@ -1,6 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
 
+export async function generateMetadata({ params }) {
+   const {id} = await params ;
+//   console.log(id,'this is generatemetadata')
+  const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json');
+    const AllAnimalData = await res.json();
+   //  console.log(AllAnimalData,'this is all animal data')
+  const FindAnimal = AllAnimalData.find(p => p.id == id);
+//   console.log(FindAnimal,'this is findanimal')
+  return {
+    title: FindAnimal.name,
+    description: FindAnimal.description,
+  }
+}
+
 const AnimalDetailsPage =async ({params}) => {
     const {id} = await params ;
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json');

@@ -2,6 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import cowimg from '@/Asset/cow-qurbany.jpg'
 
+export const metadata = {
+  title: 'Animal QurbaniGuide',
+  description: 'this is animal qurbaniguide',
+}
+
 const QurbaniGuide = () => {
     return (
         <div className='max-w-[1400px] mx-auto my-10'>

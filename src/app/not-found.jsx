@@ -1,5 +1,8 @@
 import React from 'react';
-
+export const metadata = {
+  title: 'Animal notfound',
+  description: 'this is animal not foun page ',
+}
 const NotFoundPage = () => {
     return (
         <div className='border border-red-600 mx-auto p-40 bg-red-600 rounded-full'>

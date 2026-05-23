@@ -4,11 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+export const metadata = {
+  title: 'All Animals',
+  description: 'this is all animals data fetch',
+}
+
 const AllAnimalPage =async() => {
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json')
     const AnimalData = await res.json();
     return (
-           <div className='min-w-[1400px] mx-auto border-2'>
+           <div className='min-w-[1400px] mx-auto '>
                    <Sorting AnimalData={AnimalData } ></Sorting>
                   
                 </div>

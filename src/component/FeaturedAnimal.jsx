@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
+export const metadata = {
+  title: 'Animal Data',
+  description: 'This is Animal Data',
+}
+
 const FeaturedAnimal = async() => {
     const res = await fetch('https://animal-mu-gold.vercel.app/animaldata.json')
     const CowData = await res.json();

@@ -4,7 +4,10 @@ import QurbaniBreads from "@/component/QurbaniBreads";
 import QurbaniGuide from "@/component/QurbaniGuide";
 import QurbaniTips from "@/component/QurbaniTips";
 
-
+export const metadata = {
+  title: 'Animal Home page',
+  description: 'this is the animal home page',
+}
 
 export default function Home() {
   return (

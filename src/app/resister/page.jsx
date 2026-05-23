@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
 const ResisterPage = () => {
  const router = useRouter()
@@ -24,17 +25,18 @@ const ResisterPage = () => {
     image: Data.photo,
 });
  if(!error){
-    router.push('/')
+    router.push('/login')
  }
 // console.log(data,error,'this is data and error from resister page')
- alert('resister is successfull');
+toast.success('Register is Successfully Complete')
     }
 
     const handleGoogle = async () => {
   const data = await authClient.signIn.social({
     provider: "google",
   });
-  console.log(data,'this is data and error from resister page')
+  toast.success('Google register is Successfully Complete')
+  // console.log(data,'this is data and error from resister page')
 };
 
 
